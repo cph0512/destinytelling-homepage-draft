@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>destinytelling 首頁草稿（可編修）</title>
+<style>
+:root{
+  --bg:#fdf6ec; --card:#fffdf8; --ink:#4e342e; --ink2:#6d5b50;
+  --gold:#c9932e; --gold-d:#a9760f; --purple:#5b4b8a; --purple-d:#4a3d75;
+  --meta:#7d8a97; --line:#ece0cf;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Avenir Next","PingFang TC","Noto Sans TC","Hiragino Sans",system-ui,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.7;-webkit-text-size-adjust:100%}
+.bar{position:sticky;top:0;z-index:50;background:rgba(253,246,236,.95);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);padding:10px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.bar b{color:var(--purple);font-size:15px}
+.bar .tip{color:var(--meta);font-size:12px;flex:1;min-width:160px}
+.btn{border:none;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+.btn.primary{background:var(--purple);color:#fff}
+.btn.ghost{background:#fff;color:var(--gold-d);border:1.5px solid var(--gold)}
+#saved{font-size:12px;color:var(--gold-d)}
+main{max-width:760px;margin:0 auto;padding:18px 16px 80px}
+.sec{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 18px 20px;margin:14px 0;
+  box-shadow:0 3px 14px rgba(120,88,54,.06)}
+.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;color:#fff;background:var(--gold);
+  border-radius:6px;padding:3px 9px;margin-bottom:10px}
+.tag.purple{background:var(--purple)}
+.tag.soft{background:#efe4d2;color:var(--gold-d)}
+h1{font-size:clamp(22px,5vw,32px);line-height:1.3;color:var(--ink);font-weight:900}
+h2{font-size:clamp(17px,3.6vw,22px);color:var(--ink);font-weight:800}
+.sub{color:var(--ink2);font-size:15px;margin-top:6px}
+p{margin-top:8px;font-size:15px}
+ul{margin:8px 0 0 18px} li{margin:5px 0;font-size:15px}
+.cta{display:inline-block;margin-top:12px;background:var(--purple);color:#fff;border-radius:999px;
+  padding:10px 20px;font-weight:800;font-size:14px}
+.cta.alt{background:#fff;color:var(--purple);border:1.5px solid var(--purple);margin-left:8px}
+.grid3{display:grid;grid-template-columns:1fr;gap:10px;margin-top:10px}
+.mini{background:#faf3e8;border:1px solid var(--line);border-radius:12px;padding:12px}
+.mini h3{font-size:15px;color:var(--gold-d)}
+.meta{color:var(--meta);font-size:13px}
+.month{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.mcell{border-radius:10px;padding:10px;text-align:center;font-weight:800;font-size:13px;border-bottom:3px solid}
+.g{background:#eaf3e3;border-color:#6FA84F}.n{background:#e6eef5;border-color:#5B86B0}.c{background:#f6e9da;border-color:#C98A2E}
+[contenteditable]{outline:none;border-radius:6px;transition:background .15s}
+[contenteditable]:hover{background:#fff7e9}
+[contenteditable]:focus{background:#fff2d8;box-shadow:0 0 0 2px var(--gold)}
+.note{color:var(--meta);font-size:12px;margin-top:6px;font-style:italic}
+@media(min-width:620px){.grid3{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<div class="bar">
+  <b>destinytelling 首頁草稿</b>
+  <span class="tip">點任何文字直接改，會自動存在你這台裝置。改完按「複製全部」傳回給我。</span>
+  <span id="saved"></span>
+  <button class="btn ghost" onclick="copyAll()">📋 複製全部</button>
+  <button class="btn ghost" onclick="resetAll()">↺ 重設</button>
+</div>
+
+<main id="edit">
+
+<section class="sec"><span class="tag soft">1 · 導覽列</span>
+  <p contenteditable="true">功能　｜　AI 解讀　｜　評價　｜　常見問題　｜　知識庫　｜　登入　　[中 / EN / 日]　　<b>〔開始解讀〕</b></p>
+  <div class="note">深紫「開始解讀」鈕固定在右上</div>
+</section>
+
+<section class="sec"><span class="tag">2 · Hero（主視覺）</span>
+  <h1 contenteditable="true">3 分鐘，看懂你這一生的劇本</h1>
+  <p class="sub" contenteditable="true">八字 × 紫微 × 西洋占星，三套命盤交叉解讀，講白話、能行動。</p>
+  <p contenteditable="true">輸入你的生日，AI 交叉三套命盤，照見你的過去、現在與未來。這不是算命，是你的人生使用說明書。</p>
+  <span class="cta" contenteditable="true">免費生成我的命書</span><span class="cta alt" contenteditable="true">看怎麼運作</span>
+</section>
+
+<section class="sec"><span class="tag">3 · 痛點</span>
+  <h2 contenteditable="true">你是不是也曾花錢算命，走出來卻更迷惘？</h2>
+  <div class="grid3">
+    <div class="mini"><h3 contenteditable="true">太貴</h3><p contenteditable="true">一次 NT$2,000–10,000，問一兩個問題就沒了。</p></div>
+    <div class="mini"><h3 contenteditable="true">十個老師十種說法</h3><p contenteditable="true">說法不一致，到底要信誰？</p></div>
+    <div class="mini"><h3 contenteditable="true">講得太模糊</h3><p contenteditable="true">「注意健康」「會有貴人」——聽完還是不知道要幹嘛。</p></div>
+  </div>
+</section>
+
+<section class="sec"><span class="tag">4 · 我們的解法</span>
+  <h2 contenteditable="true">destinytelling 給你能用的答案</h2>
+  <p class="sub" contenteditable="true">鳥瞰全局 · 三系統交叉 · 講到可以行動</p>
+  <p class="meta" contenteditable="true">〔數據待填〕使用人數 · 過去準確度 · 用戶評分 · 出報告時間</p>
+</section>
+
+<section class="sec"><span class="tag purple">5 · 運作方式</span>
+  <h2 contenteditable="true">真排盤先行，AI 不亂掰</h2>
+  <ul>
+    <li contenteditable="true">① 真排盤：八字／紫微／占星用正規演算法，不是 AI 亂生</li>
+    <li contenteditable="true">② 知識庫鎖定：敘述綁結構化欄位，降低漂移</li>
+    <li contenteditable="true">③ 模組化報告：每項都能逐一核對</li>
+    <li contenteditable="true">④ AI 追問：範圍內回答，超範圍會婉拒</li>
+  </ul>
+  <div class="note">差異化：三引擎交叉驗證（asksifu 只有兩套）</div>
+</section>
+
+<section class="sec"><span class="tag">6 · 免費 vs 付費</span>
+  <h2 contenteditable="true">一份命盤，兩種體驗</h2>
+  <p class="sub" contenteditable="true">用免費版驗證你的過去；用完整版規劃你的未來。免費永久免費，我們先證明給你看。</p>
+</section>
+
+<section class="sec"><span class="tag">7 · 免費報告內容</span>
+  <div class="grid3">
+    <div class="mini"><h3 contenteditable="true">👤 深度人格剖析</h3><p contenteditable="true">你其實是這樣的人</p></div>
+    <div class="mini"><h3 contenteditable="true">🎯 天賦路徑</h3><p contenteditable="true">你沒發現的強項</p></div>
+    <div class="mini"><h3 contenteditable="true">⏳ 人生時間軸</h3><p contenteditable="true">驗證過去的轉折點</p></div>
+  </div>
+</section>
+
+<section class="sec"><span class="tag purple">8 · 付費報告內容</span>
+  <ul>
+    <li contenteditable="true">💼 事業與財富：適合產業、財富模式、財務風險（含年份）</li>
+    <li contenteditable="true">🗺️ 5 年藍圖：長期方向 + 逐月指引</li>
+    <li contenteditable="true">💕 感情與關係：模式、盲點、結婚時機、3 年展望</li>
+    <li contenteditable="true">🧭 個人開運行動：方位、顏色、習慣、貴人特徵、小人警示</li>
+    <li contenteditable="true">🏥 健康風險指南：弱點掃描、宜忌、立即行動</li>
+    <li contenteditable="true">🌳 家族命盤：全家一起看（asksifu 沒有）</li>
+  </ul>
+</section>
+
+<section class="sec"><span class="tag soft">9 · 完整報告範例</span>
+  <p contenteditable="true">📋 這是你會解鎖的內容（放一段模擬報告：人格深解 / 天賦路徑 / 過去三個轉折點，標「已驗證」）。</p>
+</section>
+
+<section class="sec"><span class="tag soft">10 · 流年訊號 teaser</span>
+  <p contenteditable="true">🔮 2028 訊號：那件你一直跟自己說「還沒準備好」的事。〔付費解鎖〕</p>
+</section>
+
+<section class="sec"><span class="tag">11 · 12 個月逐月行動曆 ★現成★</span>
+  <p class="sub" contenteditable="true">提前知道哪幾個月該衝、哪幾個月該守。</p>
+  <div class="month">
+    <div class="mcell g" contenteditable="true">1月 佳<br>✨ 啟動</div>
+    <div class="mcell g" contenteditable="true">2月 佳</div>
+    <div class="mcell n" contenteditable="true">3月 平</div>
+    <div class="mcell c" contenteditable="true">4月 注意<br>⚠️ 低調</div>
+    <div class="mcell n" contenteditable="true">5月 平</div>
+    <div class="mcell g" contenteditable="true">6月 佳</div>
+    <div class="mcell g" contenteditable="true">7月 佳<br>✨ 機會</div>
+    <div class="mcell n" contenteditable="true">…</div>
+    <div class="mcell c" contenteditable="true">…</div>
+  </div>
+  <div class="note">直接接現有月份卡（程式算、秒出、佳/平/注意）</div>
+</section>
+
+<section class="sec"><span class="tag">12 · 感情婚姻分析</span>
+  <p contenteditable="true">💑 重複的情感模式、理想對象輪廓、最佳結婚窗口（例：2027 Q1–Q3）。</p>
+</section>
+
+<section class="sec"><span class="tag">13 · 貴人 × 小人（建議新增）</span>
+  <p contenteditable="true">🤝 你的命盤點名誰會幫你、誰要小心：貴人輪廓（性別/年齡差/領域）、在哪遇到、小人紅旗、最高風險時段。</p>
+</section>
+
+<section class="sec"><span class="tag">14 · 5 年藍圖</span>
+  <p contenteditable="true">你的 2026–2030 藍圖，每年一句「必做」：突破年／感情決定年／財富奠基年／整固年／升級年。接大運/流年。</p>
+</section>
+
+<section class="sec"><span class="tag purple">15 · AI 解盤師 互動 demo</span>
+  <p contenteditable="true">示範對話：使用者問「下半年適合換工作嗎？」→ AI 回到「月份 + 具體行動」。（接現有追問功能）</p>
+</section>
+
+<section class="sec"><span class="tag soft">16 · 信任句</span>
+  <h2 contenteditable="true">連你的過去都讀不準，憑什麼信它講你的未來？</h2>
+  <span class="cta" contenteditable="true">輸入生日，免費驗證 →</span>
+</section>
+
+<section class="sec"><span class="tag">17 · 隨時可問（24/7）</span>
+  <ul>
+    <li contenteditable="true">無限追問，不限次數</li>
+    <li contenteditable="true">零模糊：具體到月份 + 行動步驟</li>
+    <li contenteditable="true">完全隱私：你的秘密只有你知道</li>
+  </ul>
+</section>
+
+<section class="sec"><span class="tag">18 · 傳統 vs 我們 對比表</span>
+  <p contenteditable="true">費用：傳統一次 $200+　vs　我們訂閱制
+一致性：十師十說　vs　AI 統一系統
+清晰度：模糊　vs　具體到月份/領域
+可得性：要預約　vs　24/7 上線
+互動：有限　vs　無限追問</p>
+</section>
+
+<section class="sec"><span class="tag soft">19 · 用戶見證</span>
+  <p contenteditable="true">★★★★★ 多則真實回饋（姓名/職業/年齡 + 引述 + 解決的痛點，三語）。〔待填真實見證〕</p>
+</section>
+
+<section class="sec"><span class="tag soft">20 · 對話截圖 / DM 證明</span>
+  <p contenteditable="true">iMessage 風格對話圖：驗證過去 → 決定付費、問時機、推薦朋友。〔待放圖〕</p>
+</section>
+
+<section class="sec"><span class="tag">21 · 常見問題 FAQ</span>
+  <ul>
+    <li contenteditable="true">🔥 為何選我們：三系統交叉，跟一般算命/AI 差在哪</li>
+    <li contenteditable="true">🎯 準確度與價值：免費先驗證過去</li>
+    <li contenteditable="true">🤖 AI 能力：跟 ChatGPT 的差別（綁你的命盤、不空泛）</li>
+    <li contenteditable="true">💳 定價與實務：方案、沒出生時間怎麼辦、資料安全</li>
+  </ul>
+</section>
+
+<section class="sec"><span class="tag purple">22 · 最終 CTA</span>
+  <h2 contenteditable="true">準備好看懂你的人生了嗎？</h2>
+  <p class="sub" contenteditable="true">輸入生日，3 分鐘拿到免費命書。</p>
+  <span class="cta" contenteditable="true">免費開始</span><span class="cta alt" contenteditable="true">看裡面有什麼</span>
+</section>
+
+<section class="sec"><span class="tag soft">23 · Footer</span>
+  <p contenteditable="true">品牌語 · SSL 加密徽章 · 社群（FB/IG/Threads/YT/LINE）· 隱私 / 條款 / 聯絡 · © destinytelling</p>
+</section>
+
+</main>
+
+<script>
+const KEY="dt-homepage-draft-v1";
+const edit=document.getElementById("edit");
+const saved=document.getElementById("saved");
+// restore
+try{const s=localStorage.getItem(KEY); if(s){edit.innerHTML=s;}}catch(e){}
+let t;
+edit.addEventListener("input",()=>{
+  clearTimeout(t);
+  t=setTimeout(()=>{
+    try{localStorage.setItem(KEY,edit.innerHTML);
+      const d=new Date();saved.textContent="✓ 已存 "+d.toLocaleTimeString('zh-TW',{hour:'2-digit',minute:'2-digit'});
+    }catch(e){saved.textContent="儲存失敗（無痕模式？）";}
+  },500);
+});
+function copyAll(){
+  // 取純文字，保留段落
+  const txt=edit.innerText.replace(/\n{3,}/g,"\n\n").trim();
+  navigator.clipboard.writeText(txt).then(()=>{
+    saved.textContent="📋 已複製全部文案，貼回給 Claude 即可";
+  },()=>{
+    // fallback
+    const ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();
+    try{document.execCommand("copy");saved.textContent="📋 已複製";}catch(e){saved.textContent="複製失敗，請手動選取";}
+    ta.remove();
+  });
+}
+function resetAll(){
+  if(confirm("確定重設成原始草稿？你的修改會清掉。")){
+    localStorage.removeItem(KEY);location.reload();
+  }
+}
+</script>
+</body>
+</html>
