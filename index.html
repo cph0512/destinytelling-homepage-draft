@@ -6,15 +6,15 @@
 <title>destinytelling 首頁草稿（可編修）</title>
 <style>
 :root{
-  --bg:#fdf6ec; --card:#fffdf8; --ink:#4e342e; --ink2:#6d5b50;
-  --gold:#c9932e; --gold-d:#a9760f; --purple:#5b4b8a; --purple-d:#4a3d75;
-  --meta:#7d8a97; --line:#ece0cf;
+ --bg:#fdf6ec; --card:#fffdf8; --ink:#4e342e; --ink2:#6d5b50;
+ --gold:#c9932e; --gold-d:#a9760f; --purple:#5b4b8a; --purple-d:#4a3d75;
+ --meta:#7d8a97; --line:#ece0cf;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:"Avenir Next","PingFang TC","Noto Sans TC","Hiragino Sans",system-ui,sans-serif;
-  background:var(--bg);color:var(--ink);line-height:1.7;-webkit-text-size-adjust:100%}
+ background:var(--bg);color:var(--ink);line-height:1.7;-webkit-text-size-adjust:100%}
 .bar{position:sticky;top:0;z-index:50;background:rgba(253,246,236,.95);backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--line);padding:10px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+ border-bottom:1px solid var(--line);padding:10px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .bar b{color:var(--purple);font-size:15px}
 .bar .tip{color:var(--meta);font-size:12px;flex:1;min-width:160px}
 .btn{border:none;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
@@ -22,9 +22,9 @@ body{font-family:"Avenir Next","PingFang TC","Noto Sans TC","Hiragino Sans",syst
 #saved{font-size:12px;color:var(--gold-d)}
 main{max-width:760px;margin:0 auto;padding:18px 16px 80px}
 .sec{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 18px 20px;margin:14px 0;
-  box-shadow:0 3px 14px rgba(120,88,54,.06)}
+ box-shadow:0 3px 14px rgba(120,88,54,.06)}
 .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;color:#fff;background:var(--gold);
-  border-radius:6px;padding:3px 9px;margin-bottom:10px}
+ border-radius:6px;padding:3px 9px;margin-bottom:10px}
 .tag.purple{background:var(--purple)}
 .tag.soft{background:#efe4d2;color:var(--gold-d)}
 h1{font-size:clamp(22px,5vw,32px);line-height:1.3;color:var(--ink);font-weight:900}
@@ -33,7 +33,7 @@ h2{font-size:clamp(17px,3.6vw,22px);color:var(--ink);font-weight:800}
 p{margin-top:8px;font-size:15px}
 ul{margin:8px 0 0 18px} li{margin:5px 0;font-size:15px}
 .cta{display:inline-block;margin-top:12px;background:var(--purple);color:#fff;border-radius:999px;
-  padding:10px 20px;font-weight:800;font-size:14px}
+ padding:10px 20px;font-weight:800;font-size:14px}
 .cta.alt{background:#fff;color:var(--purple);border:1.5px solid var(--purple);margin-left:8px}
 .grid3{display:grid;grid-template-columns:1fr;gap:10px;margin-top:10px}
 .mini{background:#faf3e8;border:1px solid var(--line);border-radius:12px;padding:12px}
@@ -58,173 +58,173 @@ ul{margin:8px 0 0 18px} li{margin:5px 0;font-size:15px}
 </head>
 <body>
 <div class="bar">
-  <b>destinytelling 首頁草稿</b>
-  <span class="tip">點任何文字直接改，會自動存在你這台裝置。改完按「複製全部」傳回給我。</span>
-  <span id="saved"></span>
-  <button class="btn ghost" onclick="copyAll()">📋 複製全部</button>
-  <button class="btn ghost" onclick="resetAll()">↺ 重設</button>
+<b>destinytelling 首頁草稿</b>
+<span class="tip">點任何文字直接改，會自動存在你這台裝置。改完按「複製全部」傳回給我。</span>
+<span id="saved"></span>
+<button class="btn ghost" onclick="copyAll()">複製全部</button>
+<button class="btn ghost" onclick="resetAll()">↺ 重設</button>
 </div>
 
 <main id="edit">
 
 <section class="sec"><span class="tag soft">1 · 導覽列</span>
-  <p contenteditable="true">功能　｜　AI 解讀　｜　評價　｜　常見問題　｜　知識庫　｜　登入　　[中 / EN / 日]　　<b>〔開始解讀〕</b></p>
-  <div class="note">深紫「開始解讀」鈕固定在右上</div>
+<p contenteditable="true">功能　｜　AI 解讀　｜　評價　｜　常見問題　｜　知識庫　｜　登入　　[中 / EN / 日]　　<b>〔開始解讀〕</b></p>
+<div class="note">深紫「開始解讀」鈕固定在右上</div>
 </section>
 
 <section class="sec"><span class="tag">2 · Hero（主視覺）</span>
-  <h1 contenteditable="true">3 分鐘，看懂你這一生的劇本</h1>
-  <p class="sub" contenteditable="true">八字 × 紫微 × 西洋占星，三套命盤交叉解讀，講白話、能行動。</p>
-  <p contenteditable="true">輸入你的出生年月日時，多系統交叉分析，照見你的過去、現在與未來。這不是算命，是你的人生導覽圖。</p>
-  <span class="cta" contenteditable="true">免費生成</span><span class="cta alt" contenteditable="true">看怎麼運作</span>
+<h1 contenteditable="true">3 分鐘，看懂你這一生的劇本</h1>
+<p class="sub" contenteditable="true">八字 × 紫微 × 西洋占星，三套命盤交叉解讀，講白話、能行動。</p>
+<p contenteditable="true">輸入你的出生年月日時，多系統交叉分析，照見你的過去、現在與未來。這不是算命，是你的人生導覽圖。</p>
+<span class="cta" contenteditable="true">免費生成</span><span class="cta alt" contenteditable="true">看怎麼運作</span>
 </section>
 
 <section class="sec"><span class="tag">3 · 痛點</span>
-  <h2 contenteditable="true">你是不是也曾花錢算命，走出來卻更迷惘？</h2>
-  <div class="grid3">
-    <div class="mini"><h3 contenteditable="true">太貴</h3><p contenteditable="true">一次 NT$3,600–10,000，問一兩個問題就沒了。</p></div>
-    <div class="mini"><h3 contenteditable="true">十個老師十種說法</h3><p contenteditable="true">說法不一致，到底要信誰？</p></div>
-    <div class="mini"><h3 contenteditable="true">講得太模糊</h3><p contenteditable="true">「注意健康」「會有貴人」——聽完還是不知道要幹嘛。</p></div>
-  </div>
+<h2 contenteditable="true">你是不是也曾花錢算命，走出來卻更迷惘？</h2>
+<div class="grid3">
+<div class="mini"><h3 contenteditable="true">太貴</h3><p contenteditable="true">一次 NT$3,600–10,000，問一兩個問題就沒了。</p></div>
+<div class="mini"><h3 contenteditable="true">十個老師十種說法</h3><p contenteditable="true">說法不一致，到底要信誰？</p></div>
+<div class="mini"><h3 contenteditable="true">講得太模糊</h3><p contenteditable="true">「注意健康」「會有貴人」——聽完還是不知道要幹嘛。</p></div>
+</div>
 </section>
 
 <section class="sec"><span class="tag">4 · 我們的解法</span>
-  <h2 contenteditable="true">destinytelling 給你能用的答案</h2>
-  <p class="sub" contenteditable="true">鳥瞰全局 · 多系統交叉分析 · 讓你可以更了解自己、幫自己做決定</p>
-  <p class="meta" contenteditable="true">〔數據待填〕使用人數 · 過去準確度 · 用戶評分 · 出報告時間</p>
+<h2 contenteditable="true">destinytelling 給你能用的答案</h2>
+<p class="sub" contenteditable="true">鳥瞰全局 · 多系統交叉分析 · 讓你可以更了解自己、幫自己做決定</p>
+<p class="meta" contenteditable="true">〔數據待填〕使用人數 · 過去準確度 · 用戶評分 · 出報告時間</p>
 </section>
 
 <section class="sec"><span class="tag purple">5 · 運作方式</span>
-  <h2 contenteditable="true">真排盤先行，非 AI 亂掰</h2>
-  <ul>
-    <li contenteditable="true">① 真排盤：用古法排盤，不是 AI 亂生</li>
-    <li contenteditable="true">② 知識庫鎖定：敘述綁結構化欄位，降低漂移</li>
-    <li contenteditable="true">③ 模組化報告：每項都能逐一核對</li>
-    <li contenteditable="true">④ 追問：範圍內回答，超範圍會婉拒</li>
-  </ul>
-  <div class="note">差異化：三引擎交叉驗證（asksifu 只有兩套）</div>
+<h2 contenteditable="true">真排盤先行，非 AI 亂掰</h2>
+<ul>
+<li contenteditable="true">① 真排盤：用古法排盤，不是 AI 亂生</li>
+<li contenteditable="true">② 知識庫鎖定：敘述綁結構化欄位，降低漂移</li>
+<li contenteditable="true">③ 模組化報告：每項都能逐一核對</li>
+<li contenteditable="true">④ 追問：範圍內回答，超範圍會婉拒</li>
+</ul>
+<div class="note">差異化：三引擎交叉驗證（asksifu 只有兩套）</div>
 </section>
 
 <section class="sec"><span class="tag">6 · 免費 vs 付費</span>
-  <h2 contenteditable="true">一份命盤，兩種體驗</h2>
-  <p class="sub" contenteditable="true">用免費版驗證你的過去；用完整版規劃你的未來。免費永久免費，我們先證明給你看。</p>
+<h2 contenteditable="true">一份命盤，兩種體驗</h2>
+<p class="sub" contenteditable="true">用免費版驗證你的過去；用完整版規劃你的未來。免費永久免費，我們先證明給你看。</p>
 </section>
 
 <section class="sec"><span class="tag">7 · 免費報告內容</span>
-  <div class="grid3">
-    <div class="mini"><h3 contenteditable="true">👤 深度人格剖析</h3><p contenteditable="true">你其實是這樣的人</p></div>
-    <div class="mini"><h3 contenteditable="true">🎯 天賦路徑</h3><p contenteditable="true">你沒發現的強項</p></div>
-    <div class="mini"><h3 contenteditable="true">⏳ 人生時間軸</h3><p contenteditable="true">驗證過去的轉折點</p></div>
-  </div>
+<div class="grid3">
+<div class="mini"><h3 contenteditable="true">深度人格剖析</h3><p contenteditable="true">你其實是這樣的人</p></div>
+<div class="mini"><h3 contenteditable="true">天賦路徑</h3><p contenteditable="true">你沒發現的強項</p></div>
+<div class="mini"><h3 contenteditable="true">人生時間軸</h3><p contenteditable="true">驗證過去的轉折點</p></div>
+</div>
 </section>
 
 <section class="sec"><span class="tag purple">8 · 付費報告內容</span>
-  <ul>
-    <li contenteditable="true">💼 事業與財富：適合產業、財富模式、財務風險（含年份）</li>
-    <li contenteditable="true">🗺️ 5 年藍圖：長期方向 + 逐月指引</li>
-    <li contenteditable="true">💕 感情與關係：模式、盲點、結婚時機、3 年展望</li>
-    <li contenteditable="true">🧭 個人開運行動：方位、顏色、習慣、貴人特徵、小人警示</li>
-    <li contenteditable="true">🏥 健康風險指南：弱點掃描、宜忌、立即行動</li>
-  </ul>
+<ul>
+<li contenteditable="true">事業與財富：適合產業、財富模式、財務風險（含年份）</li>
+<li contenteditable="true">5 年藍圖：長期方向 + 逐月指引</li>
+<li contenteditable="true">感情與關係：模式、盲點、結婚時機、3 年展望</li>
+<li contenteditable="true">個人開運行動：方位、顏色、習慣、貴人特徵、小人警示</li>
+<li contenteditable="true">健康風險指南：弱點掃描、宜忌、立即行動</li>
+</ul>
 </section>
 
-<section class="sec feature"><span class="tag">★ 獨家亮點 · 家族命盤</span>
-  <h2 contenteditable="true">同年同月同日同時生，命運卻不同——關鍵在你的家庭</h2>
-  <p class="sub" contenteditable="true">傳統八字解不開的謎：兩個生辰一模一樣的人，為什麼一個順遂、一個辛苦？</p>
-  <p contenteditable="true">因為你不是一張孤立的命盤。destinytelling 把你和父母、伴侶、孩子的命盤放在一起交叉看——同樣的天賦，在不同家庭會長成完全不同的人。</p>
-  <ul>
-    <li contenteditable="true">看懂家人如何形塑你的個性與選擇</li>
-    <li contenteditable="true">你在家庭裡的角色：誰是你的助力、誰是你的課題</li>
-    <li contenteditable="true">用不同家人的視角，回頭重新看見你自己</li>
-  </ul>
-  <span class="cta" contenteditable="true">建立我的家族命盤</span>
-  <div class="note" style="color:#cfc6ad">這是我們最大的差異化，asksifu 等競品都沒有。位置/說法都可再調。</div>
+<section class="sec feature"><span class="tag">獨家亮點 · 家族命盤</span>
+<h2 contenteditable="true">同年同月同日同時生，命運卻不同——關鍵在你的家庭</h2>
+<p class="sub" contenteditable="true">傳統八字解不開的謎：兩個生辰一模一樣的人，為什麼一個順遂、一個辛苦？</p>
+<p contenteditable="true">因為你不是一張孤立的命盤。destinytelling 把你和父母、伴侶、孩子的命盤放在一起交叉看——同樣的天賦，在不同家庭會長成完全不同的人。</p>
+<ul>
+<li contenteditable="true">看懂家人如何形塑你的個性與選擇</li>
+<li contenteditable="true">你在家庭裡的角色：誰是你的助力、誰是你的課題</li>
+<li contenteditable="true">用不同家人的視角，回頭重新看見你自己</li>
+</ul>
+<span class="cta" contenteditable="true">建立我的家族命盤</span>
+<div class="note" style="color:#cfc6ad">這是我們最大的差異化，asksifu 等競品都沒有。位置/說法都可再調。</div>
 </section>
 
-<section class="sec feature"><span class="tag">★ 獨家亮點 · 合盤</span>
-  <h2 contenteditable="true">不只算感情——你和任何人的關係，都能合盤</h2>
-  <p class="sub" contenteditable="true">只要有對方的生日就行，不需要知道出生時辰。</p>
-  <p contenteditable="true">為什麼跟某個人特別合、或特別累？合盤把兩個人的命盤疊在一起，看你們的化學反應、互補與摩擦，還有怎麼相處最順。</p>
-  <ul>
-    <li contenteditable="true">💕 感情：另一半、曖昧對象、相親對象</li>
-    <li contenteditable="true">🤝 職場：同事、上司、下屬——怎麼配合、地雷在哪</li>
-    <li contenteditable="true">👯 朋友：為什麼合得來 / 處不來</li>
-    <li contenteditable="true">🧩 合作夥伴：適不適合一起做事</li>
-  </ul>
-  <p contenteditable="true"><b>門檻超低：只要生日，不用時辰</b>——大部分人不知道對方幾點生，我們照樣能幫你合。</p>
-  <span class="cta" contenteditable="true">合一張盤試試</span>
-  <div class="note" style="color:#cfc6ad">第二個主打：用途廣（不只感情）+ 門檻低（免時辰）。位置/文案可調。</div>
+<section class="sec feature"><span class="tag">獨家亮點 · 合盤</span>
+<h2 contenteditable="true">不只算感情——你和任何人的關係，都能合盤</h2>
+<p class="sub" contenteditable="true">只要有對方的生日就行，不需要知道出生時辰。</p>
+<p contenteditable="true">為什麼跟某個人特別合、或特別累？合盤把兩個人的命盤疊在一起，看你們的化學反應、互補與摩擦，還有怎麼相處最順。</p>
+<ul>
+<li contenteditable="true">感情：另一半、曖昧對象、相親對象</li>
+<li contenteditable="true">職場：同事、上司、下屬——怎麼配合、地雷在哪</li>
+<li contenteditable="true">朋友：為什麼合得來 / 處不來</li>
+<li contenteditable="true">合作夥伴：適不適合一起做事</li>
+</ul>
+<p contenteditable="true"><b>門檻超低：只要生日，不用時辰</b>——大部分人不知道對方幾點生，我們照樣能幫你合。</p>
+<span class="cta" contenteditable="true">合一張盤試試</span>
+<div class="note" style="color:#cfc6ad">第二個主打：用途廣（不只感情）+ 門檻低（免時辰）。位置/文案可調。</div>
 </section>
 
-<section class="sec feature"><span class="tag">★ 獨家亮點 · 決策建議</span>
-  <h2 contenteditable="true">卡在困難的決定？讓命盤幫你看清判斷依據</h2>
-  <p class="sub" contenteditable="true">我們不替你決定，但給你結構化的判斷依據——讓你自己選得安心、不再只憑感覺。</p>
-  <p contenteditable="true">該不該接這個 offer？要不要分手？要不要創業？該結婚嗎？決策模組把你的每個選項丟進命盤裡跑一遍，告訴你「這個選擇對你現在是什麼能量配置」。</p>
-  <ul>
-    <li contenteditable="true">任何二選一或多選一都能跑（職涯／感情／搬家／投資／合作）</li>
-    <li contenteditable="true">看每個選項的吉凶面向、需要留意的時機、能不能行</li>
-    <li contenteditable="true">不是「占卜結果」，是把你的命盤拆給你看，你自己判斷</li>
-    <li contenteditable="true">四層疊宮加權：本命 30% ＋ 流年 30% ＋ 流月 25% ＋ 流日時 15%</li>
-  </ul>
-  <span class="cta" contenteditable="true">丟一個難題給我們分析</span>
-  <div class="note" style="color:#cfc6ad">第三個主打：把難決定拆給你看，給判斷依據而非算結果。差異化在四層疊宮加權。</div>
+<section class="sec feature"><span class="tag">獨家亮點 · 決策建議</span>
+<h2 contenteditable="true">卡在困難的決定？讓命盤幫你看清判斷依據</h2>
+<p class="sub" contenteditable="true">我們不替你決定，但給你結構化的判斷依據——讓你自己選得安心、不再只憑感覺。</p>
+<p contenteditable="true">該不該接這個 offer？要不要分手？要不要創業？該結婚嗎？決策模組把你的每個選項丟進命盤裡跑一遍，告訴你「這個選擇對你現在是什麼能量配置」。</p>
+<ul>
+<li contenteditable="true">任何二選一或多選一都能跑（職涯／感情／搬家／投資／合作）</li>
+<li contenteditable="true">看每個選項的吉凶面向、需要留意的時機、能不能行</li>
+<li contenteditable="true">不是「占卜結果」，是把你的命盤拆給你看，你自己判斷</li>
+<li contenteditable="true">四層疊宮加權：本命 30% ＋ 流年 30% ＋ 流月 25% ＋ 流日時 15%</li>
+</ul>
+<span class="cta" contenteditable="true">丟一個難題給我們分析</span>
+<div class="note" style="color:#cfc6ad">第三個主打：把難決定拆給你看，給判斷依據而非算結果。差異化在四層疊宮加權。</div>
 </section>
 
 <section class="sec"><span class="tag soft">9 · 完整報告範例</span>
-  <p contenteditable="true">📋 這是你會解鎖的內容（放一段模擬報告：人格深解 / 天賦路徑 / 過去三個轉折點，標「已驗證」）。</p>
+<p contenteditable="true">這是你會解鎖的內容（放一段模擬報告：人格深解 / 天賦路徑 / 過去三個轉折點，標「已驗證」）。</p>
 </section>
 
 <section class="sec"><span class="tag soft">10 · 流年訊號 teaser</span>
-  <p contenteditable="true">🔮 2027 年：那件你一直跟自己說「還沒準備好」的事。〔付費解鎖〕</p>
+<p contenteditable="true">2027 年：那件你一直跟自己說「還沒準備好」的事。〔付費解鎖〕</p>
 </section>
 
-<section class="sec"><span class="tag">11 · 12 個月逐月行動曆 ★現成★</span>
-  <p class="sub" contenteditable="true">提前知道哪幾個月該衝、哪幾個月該守。</p>
-  <div class="month">
-    <div class="mcell g" contenteditable="true">1月 佳<br>✨ 啟動</div>
-    <div class="mcell g" contenteditable="true">2月 佳</div>
-    <div class="mcell n" contenteditable="true">3月 平</div>
-    <div class="mcell c" contenteditable="true">4月 注意<br>⚠️ 低調</div>
-    <div class="mcell n" contenteditable="true">5月 平</div>
-    <div class="mcell g" contenteditable="true">6月 佳</div>
-    <div class="mcell g" contenteditable="true">7月 佳<br>✨ 機會</div>
-    <div class="mcell n" contenteditable="true">…</div>
-    <div class="mcell c" contenteditable="true">…</div>
-  </div>
-  <div class="note">直接接現有月份卡（程式算、秒出、佳/平/注意）</div>
+<section class="sec"><span class="tag">11 · 12 個月逐月行動曆 現成</span>
+<p class="sub" contenteditable="true">提前知道哪幾個月該衝、哪幾個月該守。</p>
+<div class="month">
+<div class="mcell g" contenteditable="true">1月 佳<br>啟動</div>
+<div class="mcell g" contenteditable="true">2月 佳</div>
+<div class="mcell n" contenteditable="true">3月 平</div>
+<div class="mcell c" contenteditable="true">4月 注意<br>低調</div>
+<div class="mcell n" contenteditable="true">5月 平</div>
+<div class="mcell g" contenteditable="true">6月 佳</div>
+<div class="mcell g" contenteditable="true">7月 佳<br>機會</div>
+<div class="mcell n" contenteditable="true">…</div>
+<div class="mcell c" contenteditable="true">…</div>
+</div>
+<div class="note">直接接現有月份卡（程式算、秒出、佳/平/注意）</div>
 </section>
 
 <section class="sec"><span class="tag">12 · 感情婚姻分析</span>
-  <p contenteditable="true">💑 重複的情感模式、理想對象輪廓、最佳結婚窗口（例：2027 Q1–Q3）。</p>
+<p contenteditable="true">重複的情感模式、理想對象輪廓、最佳結婚窗口（例：2027 Q1–Q3）。</p>
 </section>
 
 <section class="sec"><span class="tag">13 · 貴人 × 小人（建議新增）</span>
-  <p contenteditable="true">🤝 你的命盤點名誰會幫你、誰要小心：貴人輪廓（性別/年齡差/領域）、在哪遇到、小人紅旗、最高風險時段。</p>
+<p contenteditable="true">你的命盤點名誰會幫你、誰要小心：貴人輪廓（性別/年齡差/領域）、在哪遇到、小人紅旗、最高風險時段。</p>
 </section>
 
 <section class="sec"><span class="tag">14 · 5 年藍圖</span>
-  <p contenteditable="true">你的 2026–2030 藍圖，每年一句「必做」：突破年／感情決定年／財富奠基年／整固年／升級年。接大運/流年。</p>
+<p contenteditable="true">你的 2026–2030 藍圖，每年一句「必做」：突破年／感情決定年／財富奠基年／整固年／升級年。接大運/流年。</p>
 </section>
 
 <section class="sec"><span class="tag purple">15 · AI 解盤師 互動 demo</span>
-  <p contenteditable="true">示範對話：使用者問「下半年適合換工作嗎？」→ 回到「月份 + 具體行動」。（接現有追問功能）</p>
+<p contenteditable="true">示範對話：使用者問「下半年適合換工作嗎？」→ 回到「月份 + 具體行動」。（接現有追問功能）</p>
 </section>
 
 <section class="sec"><span class="tag soft">16 · 信任句</span>
-  <h2 contenteditable="true">連你的過去都讀不準，憑什麼評斷你的未來？</h2>
-  <span class="cta" contenteditable="true">輸入生日，免費驗證 →</span>
+<h2 contenteditable="true">連你的過去都讀不準，憑什麼評斷你的未來？</h2>
+<span class="cta" contenteditable="true">輸入生日，免費驗證 →</span>
 </section>
 
 <section class="sec"><span class="tag">17 · 隨時可問（24/7）</span>
-  <ul>
-    <li contenteditable="true">無限追問，不限次數</li>
-    <li contenteditable="true">零模糊：具體到月份 + 行動步驟</li>
-    <li contenteditable="true">完全隱私：你的秘密只有你知道</li>
-  </ul>
+<ul>
+<li contenteditable="true">無限追問，不限次數</li>
+<li contenteditable="true">零模糊：具體到月份 + 行動步驟</li>
+<li contenteditable="true">完全隱私：你的秘密只有你知道</li>
+</ul>
 </section>
 
 <section class="sec"><span class="tag">18 · 傳統 vs 我們 對比表</span>
-  <p contenteditable="true">費用：傳統一次 $200+　vs　我們訂閱制
+<p contenteditable="true">費用：傳統一次 $200+　vs　我們訂閱制
 一致性：十師十說　vs　AI 統一系統
 清晰度：模糊　vs　具體到月份/領域
 可得性：要預約　vs　24/7 上線
@@ -232,55 +232,55 @@ ul{margin:8px 0 0 18px} li{margin:5px 0;font-size:15px}
 </section>
 
 <section class="sec"><span class="tag soft">19 · 用戶見證</span>
-  <p contenteditable="true">★★★★★ 多則真實回饋（姓名/職業/年齡 + 引述 + 解決的痛點，三語）。〔待填真實見證〕</p>
+<p contenteditable="true">多則真實回饋（姓名/職業/年齡 + 引述 + 解決的痛點，三語）。〔待填真實見證〕</p>
 </section>
 
 <section class="sec"><span class="tag soft">20 · 對話截圖 / DM 證明</span>
-  <p contenteditable="true">iMessage 風格對話圖：驗證過去 → 決定付費、問時機、推薦朋友。〔待放圖〕</p>
+<p contenteditable="true">iMessage 風格對話圖：驗證過去 → 決定付費、問時機、推薦朋友。〔待放圖〕</p>
 </section>
 
 <section class="sec"><span class="tag">21 · 常見問題 FAQ</span>
-  <ul>
-    <li contenteditable="true">🔥 為何選我們：三系統交叉，跟一般算命/AI 差在哪</li>
-    <li contenteditable="true">🎯 準確度與價值：免費先驗證過去</li>
-    <li contenteditable="true">🤖 AI 能力：跟 ChatGPT 的差別（綁你的命盤、不空泛）</li>
-    <li contenteditable="true">💳 定價與實務：方案、沒出生時間怎麼辦、資料安全</li>
-  </ul>
+<ul>
+<li contenteditable="true">為何選我們：三系統交叉，跟一般算命/AI 差在哪</li>
+<li contenteditable="true">準確度與價值：免費先驗證過去</li>
+<li contenteditable="true">AI 能力：跟 ChatGPT 的差別（綁你的命盤、不空泛）</li>
+<li contenteditable="true">定價與實務：方案、沒出生時間怎麼辦、資料安全</li>
+</ul>
 </section>
 
 <section class="sec"><span class="tag purple">22 · 最終 CTA</span>
-  <h2 contenteditable="true">準備好看懂你的人生了嗎？</h2>
-  <p class="sub" contenteditable="true">輸入生日，3 分鐘拿到免費人生導覽圖。</p>
-  <span class="cta" contenteditable="true">免費開始</span><span class="cta alt" contenteditable="true">看裡面有什麼</span>
+<h2 contenteditable="true">準備好看懂你的人生了嗎？</h2>
+<p class="sub" contenteditable="true">輸入生日，3 分鐘拿到免費人生導覽圖。</p>
+<span class="cta" contenteditable="true">免費開始</span><span class="cta alt" contenteditable="true">看裡面有什麼</span>
 </section>
 
 <section class="sec"><span class="tag soft">23 · Footer</span>
-  <p contenteditable="true">品牌語 · SSL 加密徽章 · 社群（FB/IG/Threads/YT/LINE）· 隱私 / 條款 / 聯絡 · © destinytelling</p>
+<p contenteditable="true">品牌語 · SSL 加密徽章 · 社群（FB/IG/Threads/YT/LINE）· 隱私 / 條款 / 聯絡 · © destinytelling</p>
 </section>
 
 </main>
 
 <script>
-const KEY="dt-homepage-draft-v5";
+const KEY="dt-homepage-draft-v6";
 const edit=document.getElementById("edit");
 const saved=document.getElementById("saved");
 try{const s=localStorage.getItem(KEY); if(s){edit.innerHTML=s;}}catch(e){}
 let t;
 edit.addEventListener("input",()=>{
-  clearTimeout(t);
-  t=setTimeout(()=>{
-    try{localStorage.setItem(KEY,edit.innerHTML);
-      const d=new Date();saved.textContent="✓ 已存 "+d.toLocaleTimeString('zh-TW',{hour:'2-digit',minute:'2-digit'});
-    }catch(e){saved.textContent="儲存失敗（無痕模式？）";}
-  },500);
+ clearTimeout(t);
+ t=setTimeout(()=>{
+ try{localStorage.setItem(KEY,edit.innerHTML);
+ const d=new Date();saved.textContent="✓ 已存 "+d.toLocaleTimeString('zh-TW',{hour:'2-digit',minute:'2-digit'});
+ }catch(e){saved.textContent="儲存失敗（無痕模式？）";}
+ },500);
 });
 function copyAll(){
-  const txt=edit.innerText.replace(/\n{3,}/g,"\n\n").trim();
-  navigator.clipboard.writeText(txt).then(()=>{saved.textContent="📋 已複製全部文案，貼回給 Claude 即可";},()=>{
-    const ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();
-    try{document.execCommand("copy");saved.textContent="📋 已複製";}catch(e){saved.textContent="複製失敗，請手動選取";}
-    ta.remove();
-  });
+ const txt=edit.innerText.replace(/\n{3,}/g,"\n\n").trim();
+ navigator.clipboard.writeText(txt).then(()=>{saved.textContent=" 已複製全部文案，貼回給 Claude 即可";},()=>{
+ const ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();
+ try{document.execCommand("copy");saved.textContent=" 已複製";}catch(e){saved.textContent="複製失敗，請手動選取";}
+ ta.remove();
+ });
 }
 function resetAll(){if(confirm("確定重設成原始草稿？你的修改會清掉。")){localStorage.removeItem(KEY);location.reload();}}
 </script>
