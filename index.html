@@ -18,7 +18,6 @@ body{font-family:"Avenir Next","PingFang TC","Noto Sans TC","Hiragino Sans",syst
 .bar b{color:var(--purple);font-size:15px}
 .bar .tip{color:var(--meta);font-size:12px;flex:1;min-width:160px}
 .btn{border:none;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
-.btn.primary{background:var(--purple);color:#fff}
 .btn.ghost{background:#fff;color:var(--gold-d);border:1.5px solid var(--gold)}
 #saved{font-size:12px;color:var(--gold-d)}
 main{max-width:760px;margin:0 auto;padding:18px 16px 80px}
@@ -47,6 +46,13 @@ ul{margin:8px 0 0 18px} li{margin:5px 0;font-size:15px}
 [contenteditable]:hover{background:#fff7e9}
 [contenteditable]:focus{background:#fff2d8;box-shadow:0 0 0 2px var(--gold)}
 .note{color:var(--meta);font-size:12px;margin-top:6px;font-style:italic}
+/* featured / 獨家區塊 */
+.feature{background:linear-gradient(160deg,#5b4b8a,#4a3d75);color:#f5efe0;border:none}
+.feature h2{color:#fff} .feature .sub{color:#e7dfca} .feature p{color:#efe7d4} .feature li{color:#efe7d4}
+.feature .tag{background:#e8c87a;color:#3a2f5e}
+.feature [contenteditable]:hover{background:rgba(255,255,255,.08)}
+.feature [contenteditable]:focus{background:rgba(255,255,255,.14);box-shadow:0 0 0 2px #e8c87a}
+.feature .cta{background:#e8c87a;color:#3a2f5e}
 @media(min-width:620px){.grid3{grid-template-columns:repeat(3,1fr)}}
 </style>
 </head>
@@ -69,14 +75,14 @@ ul{margin:8px 0 0 18px} li{margin:5px 0;font-size:15px}
 <section class="sec"><span class="tag">2 · Hero（主視覺）</span>
   <h1 contenteditable="true">3 分鐘，看懂你這一生的劇本</h1>
   <p class="sub" contenteditable="true">八字 × 紫微 × 西洋占星，三套命盤交叉解讀，講白話、能行動。</p>
-  <p contenteditable="true">輸入你的生日，AI 交叉三套命盤，照見你的過去、現在與未來。這不是算命，是你的人生使用說明書。</p>
-  <span class="cta" contenteditable="true">免費生成我的命書</span><span class="cta alt" contenteditable="true">看怎麼運作</span>
+  <p contenteditable="true">輸入你的出生年月日時，多系統交叉分析，照見你的過去、現在與未來。這不是算命，是你的人生導覽圖。</p>
+  <span class="cta" contenteditable="true">免費生成</span><span class="cta alt" contenteditable="true">看怎麼運作</span>
 </section>
 
 <section class="sec"><span class="tag">3 · 痛點</span>
   <h2 contenteditable="true">你是不是也曾花錢算命，走出來卻更迷惘？</h2>
   <div class="grid3">
-    <div class="mini"><h3 contenteditable="true">太貴</h3><p contenteditable="true">一次 NT$2,000–10,000，問一兩個問題就沒了。</p></div>
+    <div class="mini"><h3 contenteditable="true">太貴</h3><p contenteditable="true">一次 NT$3,600–10,000，問一兩個問題就沒了。</p></div>
     <div class="mini"><h3 contenteditable="true">十個老師十種說法</h3><p contenteditable="true">說法不一致，到底要信誰？</p></div>
     <div class="mini"><h3 contenteditable="true">講得太模糊</h3><p contenteditable="true">「注意健康」「會有貴人」——聽完還是不知道要幹嘛。</p></div>
   </div>
@@ -84,17 +90,17 @@ ul{margin:8px 0 0 18px} li{margin:5px 0;font-size:15px}
 
 <section class="sec"><span class="tag">4 · 我們的解法</span>
   <h2 contenteditable="true">destinytelling 給你能用的答案</h2>
-  <p class="sub" contenteditable="true">鳥瞰全局 · 三系統交叉 · 講到可以行動</p>
+  <p class="sub" contenteditable="true">鳥瞰全局 · 多系統交叉分析 · 讓你可以更了解自己、幫自己做決定</p>
   <p class="meta" contenteditable="true">〔數據待填〕使用人數 · 過去準確度 · 用戶評分 · 出報告時間</p>
 </section>
 
 <section class="sec"><span class="tag purple">5 · 運作方式</span>
-  <h2 contenteditable="true">真排盤先行，AI 不亂掰</h2>
+  <h2 contenteditable="true">真排盤先行，非 AI 亂掰</h2>
   <ul>
-    <li contenteditable="true">① 真排盤：八字／紫微／占星用正規演算法，不是 AI 亂生</li>
+    <li contenteditable="true">① 真排盤：用古法排盤，不是 AI 亂生</li>
     <li contenteditable="true">② 知識庫鎖定：敘述綁結構化欄位，降低漂移</li>
     <li contenteditable="true">③ 模組化報告：每項都能逐一核對</li>
-    <li contenteditable="true">④ AI 追問：範圍內回答，超範圍會婉拒</li>
+    <li contenteditable="true">④ 追問：範圍內回答，超範圍會婉拒</li>
   </ul>
   <div class="note">差異化：三引擎交叉驗證（asksifu 只有兩套）</div>
 </section>
@@ -119,8 +125,20 @@ ul{margin:8px 0 0 18px} li{margin:5px 0;font-size:15px}
     <li contenteditable="true">💕 感情與關係：模式、盲點、結婚時機、3 年展望</li>
     <li contenteditable="true">🧭 個人開運行動：方位、顏色、習慣、貴人特徵、小人警示</li>
     <li contenteditable="true">🏥 健康風險指南：弱點掃描、宜忌、立即行動</li>
-    <li contenteditable="true">🌳 家族命盤：全家一起看（asksifu 沒有）</li>
   </ul>
+</section>
+
+<section class="sec feature"><span class="tag">★ 獨家亮點 · 家族命盤</span>
+  <h2 contenteditable="true">同年同月同日同時生，命運卻不同——關鍵在你的家庭</h2>
+  <p class="sub" contenteditable="true">傳統八字解不開的謎：兩個生辰一模一樣的人，為什麼一個順遂、一個辛苦？</p>
+  <p contenteditable="true">因為你不是一張孤立的命盤。destinytelling 把你和父母、伴侶、孩子的命盤放在一起交叉看——同樣的天賦，在不同家庭會長成完全不同的人。</p>
+  <ul>
+    <li contenteditable="true">看懂家人如何形塑你的個性與選擇</li>
+    <li contenteditable="true">你在家庭裡的角色：誰是你的助力、誰是你的課題</li>
+    <li contenteditable="true">用不同家人的視角，回頭重新看見你自己</li>
+  </ul>
+  <span class="cta" contenteditable="true">建立我的家族命盤</span>
+  <div class="note" style="color:#cfc6ad">這是我們最大的差異化，asksifu 等競品都沒有。位置/說法都可再調。</div>
 </section>
 
 <section class="sec"><span class="tag soft">9 · 完整報告範例</span>
@@ -128,7 +146,7 @@ ul{margin:8px 0 0 18px} li{margin:5px 0;font-size:15px}
 </section>
 
 <section class="sec"><span class="tag soft">10 · 流年訊號 teaser</span>
-  <p contenteditable="true">🔮 2028 訊號：那件你一直跟自己說「還沒準備好」的事。〔付費解鎖〕</p>
+  <p contenteditable="true">🔮 2027 年：那件你一直跟自己說「還沒準備好」的事。〔付費解鎖〕</p>
 </section>
 
 <section class="sec"><span class="tag">11 · 12 個月逐月行動曆 ★現成★</span>
@@ -164,7 +182,7 @@ ul{margin:8px 0 0 18px} li{margin:5px 0;font-size:15px}
 </section>
 
 <section class="sec"><span class="tag soft">16 · 信任句</span>
-  <h2 contenteditable="true">連你的過去都讀不準，憑什麼信它講你的未來？</h2>
+  <h2 contenteditable="true">連你的過去都讀不準，憑什麼評斷你的未來？</h2>
   <span class="cta" contenteditable="true">輸入生日，免費驗證 →</span>
 </section>
 
@@ -214,10 +232,9 @@ ul{margin:8px 0 0 18px} li{margin:5px 0;font-size:15px}
 </main>
 
 <script>
-const KEY="dt-homepage-draft-v1";
+const KEY="dt-homepage-draft-v2";
 const edit=document.getElementById("edit");
 const saved=document.getElementById("saved");
-// restore
 try{const s=localStorage.getItem(KEY); if(s){edit.innerHTML=s;}}catch(e){}
 let t;
 edit.addEventListener("input",()=>{
@@ -229,22 +246,14 @@ edit.addEventListener("input",()=>{
   },500);
 });
 function copyAll(){
-  // 取純文字，保留段落
   const txt=edit.innerText.replace(/\n{3,}/g,"\n\n").trim();
-  navigator.clipboard.writeText(txt).then(()=>{
-    saved.textContent="📋 已複製全部文案，貼回給 Claude 即可";
-  },()=>{
-    // fallback
+  navigator.clipboard.writeText(txt).then(()=>{saved.textContent="📋 已複製全部文案，貼回給 Claude 即可";},()=>{
     const ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();
     try{document.execCommand("copy");saved.textContent="📋 已複製";}catch(e){saved.textContent="複製失敗，請手動選取";}
     ta.remove();
   });
 }
-function resetAll(){
-  if(confirm("確定重設成原始草稿？你的修改會清掉。")){
-    localStorage.removeItem(KEY);location.reload();
-  }
-}
+function resetAll(){if(confirm("確定重設成原始草稿？你的修改會清掉。")){localStorage.removeItem(KEY);location.reload();}}
 </script>
 </body>
 </html>
